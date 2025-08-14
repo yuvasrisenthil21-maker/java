@@ -1,0 +1,191 @@
+CONSTRUCTOR
+1.CREATE A BANK ACCOUNT WITH DETAILS
+
+public class BankAccount {
+             private String accountnumber;
+             private double balance; 
+             public BankAccount(String accountnumber,double balance) {
+            	 this.accountnumber=accountnumber;
+            	 this.balance=balance;
+             }
+             public BankAccount(String accountnumber) {
+            	 this.accountnumber=accountnumber;
+            	 this.balance=0.0;
+             }
+             public String getAccountnumber() {
+            	 return accountnumber;
+             }
+             public double getBalance() {
+            	 return balance;
+             }
+             public void displayInfo() {
+            	 System.out.println("Account number= " + accountnumber+"balance= " + balance);
+             }
+	public static void main(String[] args) {
+		 BankAccount account1 = new BankAccount("1273729223", 98.0);
+	        account1.displayInfo();
+	}
+}
+
+2.Write a Java program to create a Book class with the following specifications:
+Data members:
+title (String)
+author (String)
+price (double)
+
+public class Book {
+             private String title;
+             private String author;
+             private double price;
+             public Book(String title,String author,double price) {
+            	 this.title=title;
+            	 this.author=author;
+            	 this.price=price;
+             }
+            	 public Book(String title, String author) {
+            	        this.title = title;
+            	        this.author = author;
+            	        this.price = 0.0;
+            	    }
+                public Book(String title) {
+                	this.title=title;
+                	this.author="unknown";
+                	this.price=0.0;
+                }
+                public String getTitle() {
+                	return title;
+                }
+                public String getAuthor() {
+                	return author;
+                }
+                public double getPrice() {
+                	return price;
+                }
+                public void displayBookInfo() {
+                	System.out.println("Title of the book:"+title);
+                	System.out.println("Author of the book:"+author);
+                	System.out.println("Price:"+price);
+                }
+	public static void main(String[] args) {
+		Book book1=new Book("Hold my hands","Durjoy Datta",420);
+		book1.displayBookInfo();
+		
+		
+
+	}
+
+}
+
+3.Write a Java program to create a Car class with the following specifications:
+Data members:
+make (String) – the manufacturer of the car.
+model (String) – the model of the car.
+year (int) – the manufacturing year of the car.
+
+public class Car {
+             private String make;
+             private String model;
+             private int year;
+             public Car() {
+            	 this.make="unknown";
+            	 this.model="unknown";
+            	 this.year=0;
+             }
+             public Car(String make, String model, int year ) {
+            	 this.make=make;
+            	 this.model=model;
+            	 this.year=year;
+             }
+             public String getMake() {
+            	 return make;
+             }
+             public String getModel() {
+            	 return model;
+             }
+             public int getYear() {
+            	 return year;
+             }
+             public void displayInfo() {
+            	 System.out.println("Make"+ make+ "Model"+ model+"Year"+ year);
+             }
+	public static void main(String[] args) {
+		Car car2=new Car("suzuki","dzire",2011);
+		car2.displayInfo();
+		System.out.println(car2.getMake());
+		System.out.println(car2.getModel());
+		System.out.println(car2.getYear());
+
+	}
+
+}
+
+4.Write a Java program to create a class Exercise1 that stores and displays a person's details.
+Specifications:
+Data Members:
+name (String) – the person's name.
+age (int) – the person's age.
+
+public class Exercise1 {
+             private String name;
+             private int age;
+             public Exercise1(String name,int age) {
+            	 this.name=name;
+            	 this.age=age;
+             }
+             public String getName() {
+            	 return name;
+             }
+             public int getAge() {
+            	 return age;
+             }
+             public void displayInfo() {
+            	 System.out.println("name:"+name+ "age:"+age);
+             }
+	public static void main(String[] args) {
+		  Exercise1 person = new Exercise1("Saajid", 22);
+	        person.displayInfo();  
+	        System.out.println(person.getName());  
+	        System.out.println(person.getAge());   
+
+	}
+5.Write a Java program to create a Rectangle class that represents a rectangle’s dimensions and calculates its area and perimeter.
+Specifications:
+Data Members:
+length (double) – the rectangle's length.
+width (double) – the rectangle's width.
+
+public class Rectangle {
+             private double length;
+             private double width;
+             public Rectangle(double length, double width) {
+            	 this.length=length;
+            	 this.width=width;
+             }
+             public Rectangle() {
+            	 this.length=1.0;
+            	 this.width=1.0;
+             }
+             public double getLength() {
+            	 return length;
+             }
+             public double getWidth() {
+            	 return width;
+             }
+             public double getArea() {
+            	 return length*width;
+             }
+             public double getPerimeter() {
+            	 return 2*(length+width);
+             }
+             public void displayRectangleInfo() {
+            	 System.out.println("length= "+length);
+            	 System.out.println("Width= "+width);
+            	 System.out.println("Area= "+getArea());
+            	 System.out.println("Perimeter= "+getPerimeter());
+             }
+	public static void main(String[] args) {
+		Rectangle rectangle1=new Rectangle(4.0,6.0);
+        rectangle1.displayRectangleInfo();
+	}
+
+}
