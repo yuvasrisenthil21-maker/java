@@ -1,0 +1,104 @@
+LOOPS
+1.WRITE A JAVA PROGRAM TO DISPLAY NO. OF DIGITS GIVEN.
+
+import java.util.Scanner;
+public class Digits {
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int num=sc.nextInt();
+		int digit=0;
+		while(num>0) {
+			num=num/10;
+			digit++;
+		}
+System.out.printf("total %d digits",digit);
+sc.close();
+	}
+
+}
+
+2.WRITE A JAVA PROGRAM TO FIND FACTORIAL.
+
+import java.util.Scanner;
+public class Factorial {
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int num=sc.nextInt();
+		int factorial=1;
+		for(int i=num;i>1;i--)
+	factorial=factorial*i;
+		System.out.println(factorial);
+		sc.close();	
+
+	}
+}
+
+3.WRITE A JAVA PROGRAM TO CALCULATE THE POWER OF A NUMBER.
+
+import java.util.Scanner;
+public class Power {
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int base=sc.nextInt();
+		int power=sc.nextInt();
+		int result=1;
+		for(int i=1;i<=power;i++) {
+		result=result*base;	
+		}
+		System.out.println(result);
+		sc.close();
+
+	}
+}
+
+4.WRITE A JAVA PROGRAM TO FIND WHETHER THE NUMBER IS PRINE OR NOT.
+
+import java.util.Scanner;
+public class Prime {
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		boolean prime=true;
+		int num=sc.nextInt();
+		for(int i=2;i<=num;i++)
+		{
+			if(num%i==0) {
+				prime=false;
+				break;
+			}
+			
+		}
+		if(prime)
+			System.out.println("it is a prime number");
+		else
+			System.out.println("it is not a prime number");
+        sc.close();
+	}
+
+}
+
+5.WRITE A JAVA PROGRAM TO FIND WHETHER THE NUMBER IS ODD OR EVEN .
+
+import java.util.Scanner;
+
+public class Rangeoddeven {
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int m=sc.nextInt();
+		int n=sc.nextInt();
+		int even=0;
+		int odd=0;
+		for(int i=m;i<=n;i++) 
+			if(i%2==0)
+				even=even+i;
+			else
+				odd=odd+i;
+		System.out.println("Even sum"+even+"odd sum"+odd);
+		sc.close();
+		}
+
+	}
